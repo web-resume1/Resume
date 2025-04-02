@@ -1,0 +1,99 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hide the dark mode toggle checkbox */
+#dark-mode-toggle {
+  display: none;
+}
+
+/* Container holds all content and transitions theme changes */
+.container {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Apply dark theme when checkbox is checked */
+#dark-mode-toggle:checked + .container {
+  background-color: #222;
+  color: #ddd;
+}
+
+/* Header and footer styling */
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Adjust header and footer for dark mode */
+#dark-mode-toggle:checked + .container header,
+#dark-mode-toggle:checked + .container footer {
+  background-color: #555;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  transition: border-color 0.3s;
+}
+
+/* Adjust h2 border for dark mode */
+#dark-mode-toggle:checked + .container main h2 {
+  border-color: #ddd;
+}
+
+/* Toggle label styling */
+.toggle-label {
+  cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Adjust toggle label for dark mode */
+#dark-mode-toggle:checked + .container header .toggle-label {
+  background-color: #777;
+}
+
+/* Link styling */
+a {
+  color: inherit;
+}
